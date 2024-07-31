@@ -1,0 +1,117 @@
+<profile>
+    
+    <!-- <experience>
+        <job>
+            <icon>icons/google.jpeg</icon>
+            <title>Senior Data Scientist</title>
+            <company>ABC Tech</company>
+            <date>2015 - Now</date>
+            <place>India</place>
+            <description>Leading a team of data scientists in developing machine learning models for predictive analytics in various industries.</description>
+        </job>
+    </experience> -->
+
+    <education>
+        <degree>
+            <icon>icons/msit.png</icon>
+            <title>B.Tech in Electrical and Electronics Engineering</title>
+            <institution>Maharaja Surajmal Institute of Technology</institution>
+            <place>New Delhi</place>
+            <date>2018 - 2022</date>
+            <grade>CGPA 8.45</grade>
+        </degree>
+    </education>
+<!-- 
+    <certifications>
+        <certification>
+            <icon>icons/informs.jpg</icon>
+            <title>Certified Data Scientist</title>
+            <institution>Data Science Institute</institution>
+            <year>2020</year>
+            <c_link>https://example.com/certification1</c_link>
+            <insti_link>https://example.com/institution</insti_link>
+        </certification>
+    </certifications>
+
+    <publications>
+        <publication>
+            <link>https://example.com/publication1</link>
+            <title>Predictive Modeling in Healthcare</title>
+            <publisher>Journal of Data Science</publisher>
+            <p_link>http://example.com/publisher</p_link>
+            <year>2020</year>
+        </publication>
+    </publications>
+
+    <honors>
+        <honor>
+            <title>Data Science Innovator Award</title>
+            <h_link>https://example.com/honor</h_link>
+            <year>2019</year>
+        </honor>
+    </honors> -->
+
+    <domain>
+        <area>Data Science and Statistics</area>
+        <area>Signal Processing</area>
+        <area>Machine Learning</area>
+    </domain>
+
+    <!-- <proficiency>
+        <table class="proficiency-table">
+            <languages>
+                <language name="Python">
+                    <library>TensorFlow</library>
+                    <library>PyTorch</library>
+                    <library>scikit-learn</library>
+                </language>
+                <language name="R">
+                    <library>ggplot2</library>
+                    <library>dplyr</library>
+                </language>
+                <language name="SQL">
+                    <library>MySQL</library>
+                    <library>PostgreSQL</library>
+                </language>
+            </languages>
+            <frameworks>
+                <framework>Flask</framework>
+                <framework>Django</framework>
+            </frameworks>
+            <toolChains>
+                <toolChain>Docker</toolChain>
+                <toolChain>Kubernetes</toolChain>
+            </toolChains>
+            <databases>
+                <database>PostgreSQL</database>
+                <database>MongoDB</database>
+            </databases>
+            <platforms>
+                <platform>Google Cloud</platform>
+                <platform>AWS</platform>
+            </platforms>
+            <osShell>
+                <os>Linux</os>
+                <shell>Bash</shell>
+            </osShell>
+            <suites>
+                <suite>Microsoft Office</suite>
+                <suite>Google Workspace</suite>
+            </suites>
+            <paradigms>
+                <paradigm>Agile</paradigm>
+                <paradigm>DevOps</paradigm>
+            </paradigms>
+        </table>
+    </proficiency> -->
+<!-- 
+    <affiliations>
+        <affiliation>
+            <icon>icons/acm.jpg</icon>
+            <relation>Member</relation>
+            <society>Association for Computing Machinery (ACM)</society>
+            <s_link>https://www.acm.org/</s_link>   
+        </affiliation>
+    </affiliations> -->
+
+</profile>

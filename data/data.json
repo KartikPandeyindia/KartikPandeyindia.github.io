@@ -1,0 +1,19 @@
+{
+    "profile": {
+        "education": [
+            {
+                "icon": "icons/msit.png",
+                "title": "B.Tech in Electrical and Electronics Engineering",
+                "institution": "Maharaja Surajmal Institute of Technology",
+                "place": "New Delhi",
+                "date": "2018 - 2022",
+                "grade": "CGPA 8.45"
+            }
+        ],
+        "domain": [
+            "Data Science and Statistics",
+            "Signal Processing",
+            "Machine Learning"
+        ]
+    }
+}
