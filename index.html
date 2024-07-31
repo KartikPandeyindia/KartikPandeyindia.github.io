@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Jane Smith - Data Scientist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 16fr 9fr;
+            gap: 20px;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            grid-column: 1 / span 2;
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav {
+            grid-column: 1 / span 2;
+            background: #444;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .profile-pic {
+            width: 100%;
+            border-radius: 5px;
+        }
+        section {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #f4f4f4;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #f4f4f4;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        ul li i {
+            color: #333;
+            font-size: 1.2em;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .custom-icon {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 15px;
+}
+        .contact-icons {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .contact-icons a {
+            color: #333;
+            font-size: 1.5em;
+        }
+        .proficiency-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .proficiency-table th, .proficiency-table td {
+            padding: 10px;
+            text-align: left;
+        }
+        .proficiency-table th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+        .highlight-alpha {
+            color: #398ccf;
+            font-weight: bold;
+        }
+        .highlight-beta {
+            color: #01b83e;
+            font-weight: bold;
+        }
+        footer {
+            grid-column: 1 / span 2;
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+        .experience-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            background: #f4f4f4;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .experience-item i {
+            font-size: 2em;
+            margin-right: 15px;
+        }
+        .experience-item .details {
+            flex: 1;
+        }
+        .experience-item .details .company {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .experience-item .details .tenure {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dr. Jane Smith</h1>
+        <p>Data Scientist</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#publications">Publications</a>
+    </nav>
+
+    <div class="container">
+        <div>
+            <section id="about">
+                <h2>About</h2>
+                <p><span class="highlight-beta">Dr. Jane Smith</span> is a highly skilled data scientist with over <span class="highlight-alpha">15 years</span> of experience in data analysis, machine learning, and artificial intelligence. She has a proven track record of leveraging data-driven insights to solve complex problems and drive business growth.</p>
+                <p>Dr. Smith's expertise spans various industries, including healthcare, finance, and technology. She is passionate about using data to uncover hidden patterns and trends, and she is committed to advancing the field of data science through innovative research and teaching.</p>
+                <h3>Contact</h3>
+                <div class="contact-icons">
+                    <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
+                    <a href="mailto:jane.smith@university.edu"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/janesmith"><i class="fas fa-user-tie"></i></a>
+                    <a href="https://janesmithblog.com"><i class="fas fa-pen"></i></a>
+                    <a href="https://github.com/janesmith"><i class="fas fa-code-branch"></i></a>
+                    <a href="resume.pdf"><i class="fa-solid fa-file"></i></a>
+                </div>
+            </section>
+
+            <section id="experience">
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <img src="icons/download (1).jpeg" alt="Company Icon" class="custom-icon">
+                    <div class="details">
+                        <div class="company">Senior Data Scientist</div>
+                        <div class="tenure"><span class="highlight-alpha">ABC Tech | 2015 - Present</span></div>
+                        <p>Leading a team of data scientists in developing machine learning models for predictive analytics in various industries.</p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <img src="icons/download (1).jpeg" alt="Company Icon" class="custom-icon">
+                    <div class="details">
+                        <div class="company">Data Scientist</div>
+                        <div class="tenure"><span class="highlight-alpha">XYZ Corp | 2010 - 2015</span></div>
+                        <p>Developed and deployed machine learning models to enhance customer engagement and operational efficiency.</p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <img src="icons/download (1).jpeg" alt="Company Icon" class="custom-icon">
+                    <div class="details">
+                        <div class="company">Research Scientist</div>
+                        <div class="tenure"><span class="highlight-alpha">University of California, Berkeley | 2007 - 2010</span></div>
+                        <p>Conducted research in machine learning algorithms and their applications in big data analytics.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <ul>
+                    <li><img src="icons/download (1).jpeg" alt="School Icon" class="custom-icon"> Ph.D. in Computer Science, University of California, Berkeley, <span class="highlight-alpha">2007</span></li>
+                    <li><img src="icons/download (1).jpeg" alt="School Icon" class="custom-icon"> M.Sc. in Statistics, University of California, Berkeley, <span class="highlight-alpha">2004</span></li>
+                    <li><img src="icons/download (1).jpeg" alt="School Icon" class="custom-icon"> B.Sc. in Computer Science, Stanford University, <span class="highlight-alpha">2002</span></li>
+                </ul>
+            </section>
+
+            <section id="certifications">
+                <h2>Certifications</h2>
+                <ul>
+                    <li><img src="icons/download (1).jpeg" alt="Exam Icon" class="custom-icon"> <a href="https://example.com/certification1">Certified Data Scientist, Data Science Institute, <span class="highlight-alpha">2020</span></a></li>
+                    <li><img src="icons/download (1).jpeg" alt="Exam Icon" class="custom-icon"> <a href="https://example.com/certification2">Machine Learning Certification, Coursera, <span class="highlight-alpha">2018</span></a></li>
+                </ul>
+            </section>
+
+            <section id="publications">
+                <h2>Publications</h2>
+                <ul>
+                    <li><i class="fas fa-file-lines"></i> <a href="https://example.com/publication1">Predictive Modeling in Healthcare</a>, Journal of Data Science, <span class="highlight-alpha">2020</span></li>
+                    <li><i class="fas fa-file-lines"></i> <a href="https://example.com/publication2">Deep Learning for Financial Forecasting</a>, Financial Analytics Journal, <span class="highlight-alpha">2018</span></li>
+                    <li><i class="fas fa-file-lines"></i> <a href="https://example.com/publication3">Big Data and Machine Learning</a>, AI Research Journal, <span class="highlight-alpha">2016</span></li>
+                </ul>
+            </section>
+
+            <section id="honors">
+                <h2>Honors and Awards</h2>
+                <ul>
+                    <li><i class="fas fa-trophy"></i> Data Science Innovator Award, <span class="highlight-alpha">2019</span></li>
+                    <li><i class="fas fa-trophy"></i> Best Paper Award, International Conference on Machine Learning, <span class="highlight-alpha">2017</span></li>
+                    <li><i class="fas fa-trophy"></i> Excellence in Teaching Award, UC Berkeley, <span class="highlight-alpha">2015</span></li>
+                </ul>
+            </section>
+        </div>
+
+        <div>
+            <section id="profile-pic">
+                <img src="profile-pic.jpg" alt="Dr. Jane Smith" class="profile-pic">
+            </section>
+
+            <section id="domain">
+                <h2>Domain</h2>
+                <ul>
+                    <li>Machine Learning</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Big Data Analytics</li>
+                    <li>Data Visualization</li>
+                </ul>
+            </section>
+
+            <section id="proficiency">
+                <h2>Proficiency</h2>
+                <table class="proficiency-table">
+                    <tr>
+                        <th>Languages</th>
+                        <th>Libraries</th>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>TensorFlow, PyTorch, scikit-learn</td>
+                    </tr>
+                    <tr>
+                        <td>R</td>
+                        <td>ggplot2, dplyr</td>
+                    </tr>
+                    <tr>
+                        <td>SQL</td>
+                        <td>MySQL, PostgreSQL</td>
+                    </tr>
+                    <tr>
+                        <th>Frameworks</th>
+                        <td>Flask, Django</td>
+                    </tr>
+                    <tr>
+                        <th>Tool-chains</th>
+                        <td>Docker, Kubernetes</td>
+                    </tr>
+                    <tr>
+                        <th>Databases</th>
+                        <td>PostgreSQL, MongoDB</td>
+                    </tr>
+                    <tr>
+                        <th>Platforms</th>
+                        <td>Google Cloud, AWS</td>
+                    </tr>
+                    <tr>
+                        <th>OS (Shell)</th>
+                        <td>Linux (Bash)</td>
+                    </tr>
+                    <tr>
+                        <th>Suites</th>
+                        <td>Microsoft Office, Google Workspace</td>
+                    </tr>
+                    <tr>
+                        <th>Paradigms</th>
+                        <td>Agile, DevOps</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="affiliations">
+                <h2>Affiliations</h2>
+                <ul>
+                    <li><img src="icons/download (1).jpeg" alt="Society Icon" class="custom-icon"> Member, Association for Computing Machinery (ACM)</li>
+                    <li><img src="icons/download (1).jpeg" alt="Society Icon" class="custom-icon"> Member, Institute of Electrical and Electronics Engineers (IEEE)</li>
+                    <li><img src="icons/download (1).jpeg" alt="Society Icon" class="custom-icon"> Member, Data Science Society</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Dr. Jane Smith. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
