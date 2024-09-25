@@ -1,0 +1,233 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{cmbright}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[sf]{libertine}
+\usepackage{microtype}
+\usepackage{paracol}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+
+% Geometry
+\geometry{hmargin=1.75cm, vmargin=2.5cm}
+\setlength\columnsep{0.05\textwidth}
+\setlength\parindent{0pt}
+\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
+\setlength{\medskipamount}{16pt plus 6pt minus 6pt}
+\setlength{\bigskipamount}{24pt plus 8pt minus 8pt}
+
+% Style
+\pagestyle{empty}
+\titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\smallskipamount}{\smallskipamount}
+\newcommand{\heading}[2]{{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
+\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill \textit{#3} \\ {\footnotesize #2 \hfill #4} \\}
+\newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+\newcommand{\display}[3]{\footnotesize \href {#2}{#1} \hfill \textit{#3} \\}
+
+\begin{document}
+
+\vspace*{\fill}
+
+\begin{paracol}{2}
+\columnratio{0.30, 0.70}
+
+% Name & headline
+\heading{Kartik Pandey} {Data Scientist}
+
+\switchcolumn     %---------------------------------------------------------------------------------------------------------
+
+% Identity card
+
+\begin{supertabular}{l|r}
+  \footnotesize\faPhone & \href{tel:918826120960}{ +91 88261 20960} \\
+  \footnotesize\faEnvelope & \href{mailto:kartikpandeyindia@gmail.com}{ kartikpandeyindia@gmail.com} \\
+  \footnotesize\faUserTie & \href{https://www.linkedin.com/in/kartik-pandey-india}{linkedin.com/in/kartik-pandey-in} \\
+  \footnotesize\faPen & \href{https://sleepingpandey.blogspot.com}{sleepingpandey.blogspot.com} \\
+  \footnotesize\faCodeBranch & \href{https://github.com/KartikPandeyindia}{github.com/KartikPandeyindia} \\  
+\end{supertabular}
+
+\medskip
+\end{paracol}
+ %---------------------------------------------------------------------------------------------------------
+
+\begin{paracol}{2}
+\switchcolumn
+
+%----------------About
+
+\section{abstract}
+
+% ---------------Experiences
+\section{experience}
+
+
+% ---------------Education 
+\section{education}
+
+\entry{Maharaja Surajmal Institute of Tech., Delhi}{B.Tech, Electrical and Electronics Engineering}{2022}{CGPA 8.45}
+
+
+
+% ----------------Certifications 
+\section{certifications}
+\display{GATE qualified}{https://drive.google.com/file/d/1shcvrExVXRHoQDvvzEtomb_LwSz4b1zZ/view?usp=sharing}{2024}
+\display{MATLAB onramp}{https://drive.google.com/file/d/1mkDalK8A1keLxXXYWNhQnshTT9sq1vor/view?usp=sharing}{2024}
+\display{Hands-on start to Wolfram Mathematica}{https://drive.google.com/file/d/1UMcH0YTn9qbdHo8LIr4tHWEiZi-Xrejt/view?usp=sharing}{2024}
+\display{Web Development Training: HTML, CSS, JS, React, PHP, DBMS}{https://drive.google.com/file/d/1BNM1FAxmFkPRrkxTPHEAF5gk_rhXNg5g/view?usp=sharing}{2021}
+\display{Summer Training: Programming with C and C++}{https://drive.google.com/file/d/190HRy9cnmwrG0kCt_TeKr5rngykm1PkW/view?usp=sharing}{2020}
+
+% ----------------Projects
+\section{projects}
+
+% ----------------Publications
+\section{publications}  
+
+% ----------------Honors
+\section{honors}
+
+
+
+\switchcolumn     %---------------------------------------------------------------------------------------------------------
+
+\section{domain}
+
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Data Science and Statistics
+  \item Signal Processing
+  \item Machine Learning
+\end{itemize}
+
+\section{proficiency}
+
+
+\begin{supertabular}{r|c}
+
+% Any language - programming, scripting, etc.
+ \tableentry{\footnotesize  \underline{languages} }{\footnotesize \underline{libraries} }{}
+ \tableentry{\footnotesize python}{\footnotesize  \textperiodcentered }{}
+ \tableentry{\footnotesize c++}{\footnotesize  \textperiodcentered }{}
+ \tableentry{\footnotesize r}{\footnotesize  \textperiodcentered }{}
+ \tableentry{\footnotesize sql}{\footnotesize  \textperiodcentered }{}
+ \smallskip{} % Before the last entry of language and library
+ \tableentry{\footnotesize latex}{\footnotesize  \textperiodcentered }{}
+
+% Any embedded software which dominates the program structure. like Bootstrap, React
+  \tableentry{\footnotesize frameworks}{\footnotesize}{}
+
+% Any set of programs assisting the main development - security, automation, database? etc. 
+  \tableentry{\footnotesize tool-chains}{\footnotesize git \textperiodcentered }{}
+
+% Any database technology (open or third-party) RDBS, Unstructured, Warehouse, Cloud
+  \tableentry{\footnotesize databases}{\footnotesize oracle \textperiodcentered mysql}{}
+
+% Place where development happens, these are completely proprietary. like Matlab, VSCode.
+  \tableentry{\footnotesize platforms}{\footnotesize matlab \textperiodcentered mathematica}{}
+  \tableentry{\footnotesize }{\footnotesize aws \textperiodcentered jupyter}{}
+  \tableentry{\footnotesize }{\footnotesize nvim \textperiodcentered vscode}{}
+  
+% Operating Systems and their shell  
+  \tableentry{\footnotesize os (shell)}{\footnotesize linux(bash)}{}
+
+% Set of proprietary software bundled together.
+  \tableentry{\footnotesize suites}{\footnotesize  ms office}{}
+    
+
+% Methodologies, concepts, jargons.
+  \tableentry{\footnotesize paradigms}{\footnotesize}{}
+
+\end{supertabular}
+
+
+\section{affiliations}
+
+\begin{supertabular}{r|l}
+
+\end{supertabular}
+
+\switchcolumn     %---------------------------------------------------------------------------------------------------------
+
+
+
+\end{paracol}
+
+\vspace*{\fill}
+
+\end{document}
+
+
+% 
+Kartik Pandey
+Data Scientist
+
+about
+
+experience
+
+education
+Maharaja Surajmal Institute of Tech., Delhi 2018     2022
+B.Tech, Electrical and Electronics Engineering CGPA 8.4
+
+certifications
+Qualified GATE EC
+
+2023
+
+publications
+
+honors
+
+    call: +91 88261 20960
+# gmail: kartikpandeyindia
+   linkedin: kartik-pandey-in
+v blogspot: sleepingpandey
+   github: KartikPandeyindia
+
+domain
+    Data Science and Statistics
+    Signal Processing
+    Machine Learning
+
+proficiency
+languages libraries
+
+python tensorflow   
+
+frameworks
+
+tool-chains
+
+databases
+
+platforms
+
+os (shell)
+
+suites
+
+paradigms
+
+affiliations
+
+tel:918826120960
+mailto:kartikpandeyindia@gmail.com
+https://www.linkedin.com/in/kartik-pandey-india
+https://sleepingpandey.blogspot.com
+https://github.com/KartikPandeyindia
+
+	about
+	experience
+	education
+	certifications
+	publications
+	honors
+	domain
+	proficiency
+	affiliations
+
+%
