@@ -1,11 +1,11 @@
 /* General styles */
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #757575;
+    color: #292929;
 }
 
 .container {
@@ -19,8 +19,9 @@ body {
 }
 
 header {
-    background: #333;
-    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    background: #292929;
+    color: #f4f4f4;
     padding: 10px;
     display:block;
     justify-content: center;
@@ -50,11 +51,12 @@ header h1 {
 
 .profile-pic {
     width: 100%;
+    border-style: ;
     border-radius: 5px;
 }
 
 section {
-    background: #fff;
+    background: #ececec;
     margin: 20px 0;
     padding: 20px;
     border-radius: 5px;
@@ -116,7 +118,7 @@ a:hover {
 }
 
 .contact-icons a:hover {
-    color: #398ccf;
+    color: #2196f3;
     text-decoration: none;
     transform: scale(1.2);
 }
