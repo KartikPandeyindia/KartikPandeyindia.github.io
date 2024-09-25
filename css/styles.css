@@ -1,4 +1,4 @@
-/* Small devices (phones) */
+/* Small devices (phones) didn't work */
 @media (max-width: 480px) {
     .container {
         width: 90%; /* Width for mobile phones */
