@@ -9,8 +9,7 @@ body {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 16fr 9fr;
+    display:block;
     gap: 20px;
     width: 80%;
     margin: auto;
@@ -111,7 +110,7 @@ a:hover {
 }
 
 .contact-icons a {
-    color: #333;
+    color: #292929;
     font-size: 1.5em;
     transition: color 1s, transform 0.2s;
 }

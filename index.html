@@ -16,57 +16,38 @@
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
             displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
             processEscapes: true
-          },
-          "HTML-CSS": { availableFonts: ["TeX"] }
-        });
-      </script>
+        },
+        "HTML-CSS": { availableFonts: ["TeX"] }
+    });
+</script>
     <script async="async"
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
         type="text/javascript"></script>
+    <script>
+        // Function to fetch the JSON file and display the paragraph
+        fetch('/data/say.json')
+            .then(response => response.json()) // Parse the JSON data
+            .then(data => {
+                const contentDiv = document.getElementById('content');
+                contentDiv.innerHTML = `<p>${data.about}</p>`; // Insert the paragraph into the div
+            })
+            .catch(error => console.error('Error fetching the JSON:', error)); // Handle any errors
+    </script>
 </head>
 
 <body>
 
-    <header>
-        <div class="header-content">
-            <div class="header-name">
-                <h1>Kartik Pandey</h1>
-                <p>Data Science and Finance</p>
-            </div>
-        </div>
-    </header>
+    <header></header>
     <div class="container">
         <section id="about" style="margin: auto; padding: 20px;">
             <div style="display: flex;">
-                <div style="width: 18%; margin-right: 4%; margin-top: 2%;">
+                <div
+                    style="width: 18%; margin-right: 4%; margin-top: 2%; background: linear-gradient(to bottom, #757575, #ececec);">
                     <img src="profile-pic.jpg" alt="Kartik Pandey 2024" class="profile-pic">
                 </div>
                 <div style="width: 78%;">
-                    <h2>Hey, myself Kartik.</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip
-                        $4x - 7x = -3x$
-                        $$e = mc^2$$
-                        ex ea commodo consequat.  
-
-                        Duis aute <span class="highlight-beta">keyword here</span> in voluptate velit esse<span
-                            class="highlight-alpha">data point here</span> nulla pariatur. Excepteur sint occaecat
-                        cupidatat
-                        non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
-                        amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut
-                        enim
-                        ad minim veniam, quis nostrud exerc. Duis aute irure dolor in reprehenderit in voluptate velit
-                        esse
-                        cillum dolore eu fugiat nulla pariatur.
-                    </p>
-                    <p> Industries : Finance</p>
+                    <h2>Hello, myself $\text{Kartik}$.</h2>
+                    <div id="content"></div>
                 </div>
             </div>
             <div class="contact-icons">
@@ -92,5 +73,7 @@
     </footer>
 
 </body>
+
+
 
 </html>
