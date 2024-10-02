@@ -1,94 +1,49 @@
-/* General styles */
+/* Small devices (phones) didn't work */
+@media (max-width: 480px) {
+    .container {
+        width: 90%; /* Width for mobile phones */
+    }
+    .contact-icons {
+        padding : 10px 0;
+    }
+}
+
+
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #757575;
+    color: #292929;
 }
-
 .container {
-    display: grid;
-    grid-template-columns: 16fr 9fr;
-    gap: 20px;
-    width: 80%;
+    display: block;
+    width: 50%;
     margin: auto;
     overflow: hidden;
-    padding: 20px;
+    padding: 50px;
+}
+section {
+    background: #ececec;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px;
-    display:block;
-    justify-content: center;
-    align-items: center;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.header-name {
-    flex: 1;
-    text-align: center;
-}
-
-.header-name h1 {
-    margin: 0;
-    font-size: 2.4em;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
 
 .profile-pic {
-    width: 100%;
-    border-radius: 5px;
+    display: block;
+    margin: 6px auto;
+    width: 85%;
+
 }
 
-section {
-    background: #fff;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #333;
-    border-bottom: 2px solid #f4f4f4;
-    padding-bottom: 5px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background: #f4f4f4;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-ul li i {
-    color: #333;
-    font-size: 1.2em;
+.profile-pic-box {
+    background: linear-gradient(to bottom, #757575, #ececec);
 }
 
 a {
-    color: #7c0909;
+    color: #2196f3;
     text-decoration: none;
     transition: text-decoration 0.5s;
 }
@@ -97,107 +52,92 @@ a:hover {
     text-decoration: underline;
 }
 
-.custom-icon {
-    width: 40px; /* Adjust size as needed */
-    height: auto;
-    margin-right: 15px;
-}
 
-.contact-icons {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-}
+    .contact-icons {
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-around;
+        padding: 10px 20%;
+    }
 
-.contact-icons a {
-    color: #333;
-    font-size: 1.5em;
-    transition: color 1s, transform 0.2s;
-}
+    .contact-icons a {
+        color: #292929;
+        font-size: 1.5em;
+        transition: color 1s, transform 0.2s;
+    }
 
-.contact-icons a:hover {
-    color: #398ccf;
-    text-decoration: none;
-    transform: scale(1.2);
-}
+    .contact-icons a:hover {
+        color: #2196f3;
+        text-decoration: none;
+        transform: scale(1.2);
+    }
 
-.contact-a {
-    display: grid;
-    grid-template-rows: auto auto;
-    text-align: center;
-}
+    .contact-a {
+        display: grid;
+        grid-template-rows: auto auto;
+        text-align: center;
+    }
 
-.contact-text {
-    display: block;
-    font-size: small;
-    text-align: center;
-}
-
-.proficiency-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.proficiency-table th, .proficiency-table td {
-    padding: 10px;
-    text-align: left;
-}
-
-.proficiency-table th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-}
-
-.highlight-alpha {
-    color: #398ccf;
-    font-weight: bold;
-}
-
-.highlight-beta {
-    color: #01b83e;
-    font-weight: bold;
-}
+    .contact-text {
+        display: block;
+        font-size: small;
+        text-align: center;
+    }
 
 
-.experience-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    padding: 10px;
-    border-radius: 5px;
-    background: #f4f4f4;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
+      
+                        .text-with-bubble {
+                            position: relative;
+                            display: inline-block;
+                            cursor: pointer;
+                        color: #808080;
+                        }
+                    
+                    .text-with-bubble:hover {
+                            background-color: #f0f0f0;
+                        }
+                    
+                        .text-with-bubble:hover .bubble {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    
+                        .bubble {
+                            visibility: hidden;
+                            opacity: 0;
+                            width: 150px;
+                            background-color: #f4f4f4;
+                            color: #292929;
+                            font-family:fantasy;
+                            font-size: 0.7em; line-height: 1.0;
+                            text-align: center;
+                            border-radius: 6px;
+                            padding: 8px;
+                            position: absolute;
+                            z-index: 1;
+                            bottom: 125%; /* Position the bubble above the text */
+                            left: 50%;
+                            transform: translateX(-50%);
+                            transition: opacity 0.3s;
+                            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                        }
+                    
+                        .bubble::after {
+                            content: '';
+                            position: absolute;
+                            top: 100%; /* Bottom of the bubble */
+                            left: 50%;
+                            margin-left: -5px;
+                            border-width: 5px;
+                            border-style: solid;
+                            border-color: #f9f9f9 transparent transparent transparent;
+                        }
 
-.experience-item i {
-    font-size: 2em;
-    margin-right: 15px;
-}
-
-.experience-item .details {
-    flex: 1;
-}
-
-.experience-item .details .company {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.experience-item .details .tenure {
-    color: #555;
-}
-
-.aff-text {
-    display: block;
-    font-size: small;
-    text-align: center;
-}
 
 footer {
-    grid-column: 1 / span 2;
     text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
-    margin-top: 20px;
+    padding: 5px 0;
+    background: #292929;
+    color: #f4f4f4;
+    margin-top: 30px;
 }
