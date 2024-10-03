@@ -9,9 +9,10 @@
 \usepackage[sf]{libertine}
 \usepackage{microtype}
 \usepackage{paracol}
+\usepackage{xcolor}
 \usepackage{supertabular}
 \usepackage{titlesec}
-\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+\hypersetup{colorlinks, urlcolor=gray, linkcolor=black}
 
 % Geometry
 \geometry{hmargin=1.75cm, vmargin=2.5cm}
@@ -27,10 +28,11 @@
 \titlespacing{\section}{0pt}{\smallskipamount}{\smallskipamount}
 \newcommand{\heading}[2]{{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
 \newcommand{\entry}[4]{{{\textbf{#1}}} \hfill \textit{#3} \\ {\footnotesize #2 \hfill #4} \\}
-\newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
-\newcommand{\display}[3]{\footnotesize \href {#2}{#1} \hfill \textit{#3} \\}
+\newcommand{\tableentry}[3]{\textsc{#1} & \scriptsize{#2}\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+\newcommand{\display}[3]{\footnotesize #1 \hfill \href{#2}{\faCertificate}  \textit{#3} \\}
 
 \begin{document}
+\pagecolor[HTML]{ECECEC}
 
 \vspace*{\fill}
 
@@ -113,36 +115,36 @@
 
 % Any language - programming, scripting, etc.
  \tableentry{\footnotesize  \underline{languages} }{\footnotesize \underline{libraries} }{}
- \tableentry{\scriptsize Python}{\scriptsize  \textperiodcentered }{}
- \tableentry{\scriptsize C++}{\scriptsize  \textperiodcentered }{}
- \tableentry{\scriptsize R}{\scriptsize  \textperiodcentered }{}
- \tableentry{\scriptsize SQL}{\scriptsize  \textperiodcentered }{}
+ \tableentry{\scriptsize Python}{  \textperiodcentered }{}
+ \tableentry{\scriptsize C++}{  \textperiodcentered }{}
+ \tableentry{\scriptsize R}{  \textperiodcentered }{}
+ \tableentry{\scriptsize SQL}{  \textperiodcentered }{}
  \smallskip{} % Before the last entry of language and library
- \tableentry{\scriptsize Latex}{\scriptsize  \textperiodcentered }{}
+ \tableentry{\scriptsize Latex}{  \textperiodcentered }{}
 
 % Any embedded software which dominates the program structure. like Bootstrap, React
-  \tableentry{\footnotesize frameworks}{\scriptsize}{}
+  \tableentry{\footnotesize frameworks}{}{}
 
 % Any set of programs assisting the main development - security, automation, database? etc. 
-  \tableentry{\footnotesize tool-chains}{\scriptsize Git \textperiodcentered }{}
+  \tableentry{\footnotesize tool-chains}{Git \textperiodcentered }{}
 
 % Any database technology (open or third-party) RDBS, Unstructured, Warehouse, Cloud
-  \tableentry{\footnotesize databases}{\scriptsize Oracle \textperiodcentered MySQL}{}
+  \tableentry{\footnotesize databases}{ Oracle \textperiodcentered MySQL}{}
 
 % Place where development happens, these are completely proprietary. like Matlab, VSCode.
-  \tableentry{\footnotesize platforms}{\scriptsize Matlab \textperiodcentered Mathematica}{}
-  \tableentry{\scriptsize }{\scriptsize AWS \textperiodcentered Jupyter}{}
-  \tableentry{\scriptsize }{\scriptsize Vim \textperiodcentered VSCode}{}
+  \tableentry{\footnotesize platforms}{ Matlab \textperiodcentered Mathematica}{}
+  \tableentry{\scriptsize }{ AWS \textperiodcentered Jupyter}{}
+  \tableentry{\scriptsize }{ Vim \textperiodcentered VSCode}{}
   
 % Operating Systems and their shell  
-  \tableentry{\footnotesize os (shell)}{\scriptsize Linux(Bash)}{}
+  \tableentry{\footnotesize os (shell)}{ Linux(Bash)}{}
 
 % Set of proprietary software bundled together.
-  \tableentry{\footnotesize suites}{\scriptsize  MS Office}{}
+  \tableentry{\footnotesize suites}{  MS Office}{}
     
 
 % Methodologies, concepts, jargons.
-  \tableentry{\footnotesize paradigms}{\scriptsize}{}
+  \tableentry{\footnotesize paradigms}{}{}
 
 \end{supertabular}
 
