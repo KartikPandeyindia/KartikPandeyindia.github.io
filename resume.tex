@@ -23,7 +23,7 @@
 
 % Style
 \pagestyle{empty}
-\titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}{\Large\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{\smallskipamount}{\smallskipamount}
 \newcommand{\heading}[2]{{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
 \newcommand{\entry}[4]{{{\textbf{#1}}} \hfill \textit{#3} \\ {\footnotesize #2 \hfill #4} \\}
@@ -43,7 +43,7 @@
 \switchcolumn     %---------------------------------------------------------------------------------------------------------
 
 % Identity card
-
+\raggedleft{
 \begin{supertabular}{l|r}
   \footnotesize\faPhone & \href{tel:918826120960}{ +91 88261 20960} \\
   \footnotesize\faEnvelope & \href{mailto:kartikpandeyindia@gmail.com}{ kartikpandeyindia@gmail.com} \\
@@ -51,6 +51,7 @@
   \footnotesize\faPen & \href{https://sleepingpandey.blogspot.com}{sleepingpandey.blogspot.com} \\
   \footnotesize\faCodeBranch & \href{https://github.com/KartikPandeyindia}{github.com/KartikPandeyindia} \\  
 \end{supertabular}
+  }
 
 \medskip
 \end{paracol}
@@ -61,8 +62,8 @@
 
 %----------------About
 
-\section{abstract}
-Recent graduate with a B.Tech in Electrical and Electronics Engineering from MSIT, GGSIPU. GATE EC Qualifed. Passionate about data science and analytics, with a keen interest in exploring data-driven solutions and insights. Actively seeking opportunities for growth and hands-on experience in data analysis, machine learning, and statistical methods. 
+\section{Abstract}
+  \footnotesize {Recent graduate with a B.Tech in Electrical and Electronics Engineering from MSIT, GGSIPU. GATE EC Qualifed. Passionate about data science and analytics, with a keen interest in exploring data-driven solutions and insights. Actively seeking opportunities for growth and hands-on experience in data analysis, machine learning, and statistical methods.} 
 
 
 % ---------------Experiences
@@ -70,14 +71,14 @@ Recent graduate with a B.Tech in Electrical and Electronics Engineering from MSI
 
 
 % ---------------Education 
-\section{education}
+\section{Education}
 
 \entry{Maharaja Surajmal Institute of Tech., Delhi}{B.Tech, Electrical and Electronics Engineering}{2022}{CGPA 8.45}
 
 
 
 % ----------------Certifications 
-\section{certifications}
+\section{Certifications}
 \display{GATE qualified}{https://drive.google.com/file/d/1shcvrExVXRHoQDvvzEtomb_LwSz4b1zZ/view?usp=sharing}{2024}
 \display{MATLAB onramp}{https://drive.google.com/file/d/1mkDalK8A1keLxXXYWNhQnshTT9sq1vor/view?usp=sharing}{2024}
 \display{Hands-on start to Wolfram Mathematica}{https://drive.google.com/file/d/1UMcH0YTn9qbdHo8LIr4tHWEiZi-Xrejt/view?usp=sharing}{2024}
@@ -85,19 +86,19 @@ Recent graduate with a B.Tech in Electrical and Electronics Engineering from MSI
 \display{Summer Training: Programming with C and C++}{https://drive.google.com/file/d/190HRy9cnmwrG0kCt_TeKr5rngykm1PkW/view?usp=sharing}{2020}
 
 % ----------------Projects
-%\section{projects}
+%\section{Projects}
 
 % ----------------Publications
-%\section{publications}  
+%\section{Publications}  
 
 % ----------------Honors
-%\section{honors}
+%\section{Honors}
 
 
 
 \switchcolumn     %---------------------------------------------------------------------------------------------------------
 
-\section{domain}
+\section{Domain}
 
 \begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
   \item Data Science and Analysis
@@ -105,48 +106,48 @@ Recent graduate with a B.Tech in Electrical and Electronics Engineering from MSI
   \item Signal Processing
 \end{itemize}
 
-\section{proficiency}
+\section{Proficiency}
 
 
 \begin{supertabular}{r|c}
 
 % Any language - programming, scripting, etc.
  \tableentry{\footnotesize  \underline{languages} }{\footnotesize \underline{libraries} }{}
- \tableentry{\footnotesize python}{\footnotesize  \textperiodcentered }{}
- \tableentry{\footnotesize c++}{\footnotesize  \textperiodcentered }{}
- \tableentry{\footnotesize r}{\footnotesize  \textperiodcentered }{}
- \tableentry{\footnotesize sql}{\footnotesize  \textperiodcentered }{}
+ \tableentry{\scriptsize Python}{\scriptsize  \textperiodcentered }{}
+ \tableentry{\scriptsize C++}{\scriptsize  \textperiodcentered }{}
+ \tableentry{\scriptsize R}{\scriptsize  \textperiodcentered }{}
+ \tableentry{\scriptsize SQL}{\scriptsize  \textperiodcentered }{}
  \smallskip{} % Before the last entry of language and library
- \tableentry{\footnotesize latex}{\footnotesize  \textperiodcentered }{}
+ \tableentry{\scriptsize Latex}{\scriptsize  \textperiodcentered }{}
 
 % Any embedded software which dominates the program structure. like Bootstrap, React
-  \tableentry{\footnotesize frameworks}{\footnotesize}{}
+  \tableentry{\footnotesize frameworks}{\scriptsize}{}
 
 % Any set of programs assisting the main development - security, automation, database? etc. 
-  \tableentry{\footnotesize tool-chains}{\footnotesize git \textperiodcentered }{}
+  \tableentry{\footnotesize tool-chains}{\scriptsize Git \textperiodcentered }{}
 
 % Any database technology (open or third-party) RDBS, Unstructured, Warehouse, Cloud
-  \tableentry{\footnotesize databases}{\footnotesize oracle \textperiodcentered mysql}{}
+  \tableentry{\footnotesize databases}{\scriptsize Oracle \textperiodcentered MySQL}{}
 
 % Place where development happens, these are completely proprietary. like Matlab, VSCode.
-  \tableentry{\footnotesize platforms}{\footnotesize matlab \textperiodcentered mathematica}{}
-  \tableentry{\footnotesize }{\footnotesize aws \textperiodcentered jupyter}{}
-  \tableentry{\footnotesize }{\footnotesize nvim \textperiodcentered vscode}{}
+  \tableentry{\footnotesize platforms}{\scriptsize Matlab \textperiodcentered Mathematica}{}
+  \tableentry{\scriptsize }{\scriptsize AWS \textperiodcentered Jupyter}{}
+  \tableentry{\scriptsize }{\scriptsize Vim \textperiodcentered VSCode}{}
   
 % Operating Systems and their shell  
-  \tableentry{\footnotesize os (shell)}{\footnotesize linux(bash)}{}
+  \tableentry{\footnotesize os (shell)}{\scriptsize Linux(Bash)}{}
 
 % Set of proprietary software bundled together.
-  \tableentry{\footnotesize suites}{\footnotesize  ms office}{}
+  \tableentry{\footnotesize suites}{\scriptsize  MS Office}{}
     
 
 % Methodologies, concepts, jargons.
-  \tableentry{\footnotesize paradigms}{\footnotesize}{}
+  \tableentry{\footnotesize paradigms}{\scriptsize}{}
 
 \end{supertabular}
 
 
-%\section{affiliations}
+%\section{Affiliations}
 %
 %\begin{supertabular}{r|l}
 %
@@ -162,74 +163,3 @@ Recent graduate with a B.Tech in Electrical and Electronics Engineering from MSI
 
 \end{document}
 
-
-% 
-Kartik Pandey
-Data Scientist
-
-about
-
-experience
-
-education
-Maharaja Surajmal Institute of Tech., Delhi 2018     2022
-B.Tech, Electrical and Electronics Engineering CGPA 8.4
-
-certifications
-Qualified GATE EC
-
-2023
-
-publications
-
-honors
-
-    call: +91 88261 20960
-# gmail: kartikpandeyindia
-   linkedin: kartik-pandey-in
-v blogspot: sleepingpandey
-   github: KartikPandeyindia
-
-domain
-    Data Science and Statistics
-    Signal Processing
-    Machine Learning
-
-proficiency
-languages libraries
-
-python tensorflow   
-
-frameworks
-
-tool-chains
-
-databases
-
-platforms
-
-os (shell)
-
-suites
-
-paradigms
-
-affiliations
-
-tel:918826120960
-mailto:kartikpandeyindia@gmail.com
-https://www.linkedin.com/in/kartik-pandey-india
-https://sleepingpandey.blogspot.com
-https://github.com/KartikPandeyindia
-
-	about
-	experience
-	education
-	certifications
-	publications
-	honors
-	domain
-	proficiency
-	affiliations
-
-%
