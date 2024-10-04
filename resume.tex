@@ -5,6 +5,7 @@
 \usepackage{fancyhdr}
 \usepackage{fontawesome5}
 \usepackage{geometry}
+\usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[sf]{libertine}
 \usepackage{microtype}
@@ -24,10 +25,10 @@
 
 % Style
 \pagestyle{empty}
-\titleformat{\section}{\Large\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}{\large\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{\smallskipamount}{\smallskipamount}
 \newcommand{\heading}[2]{{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
-\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill \textit{#3} \\ {\footnotesize #2 \hfill #4} \\}
+\newcommand{\entry}[5]{{{\textbf{#1}}} \hfill \href{#5}{\faGraduationCap}\textit{#3} \\ {\footnotesize #2 \hfill #4} \\}
 \newcommand{\tableentry}[3]{\textsc{#1} & \scriptsize{#2}\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
 \newcommand{\display}[3]{\footnotesize #1 \hfill \href{#2}{\faCertificate}  \textit{#3} \\}
 
@@ -65,23 +66,23 @@
 %----------------About
 
 \section{Abstract}
-  \footnotesize {Recent graduate with a B.Tech in Electrical and Electronics Engineering from MSIT, GGSIPU. GATE EC Qualifed. Passionate about data science and analytics, with a keen interest in exploring data-driven solutions and insights. Actively seeking opportunities for growth and hands-on experience in data analysis, machine learning, and statistical methods.} 
+  \footnotesize {Recent graduate with a Bachelors of Technology (B.Tech) with \textit{first division}, in Electrical and Electronics Engineering (EEE) from MSIT, GGSIPU. Have \textit{qualified} Graduate Aptitude Test in Engineering (GATE) in Electronics and Communication Engineering (EC). } 
 
 
 % ---------------Experiences
-%\section{experience}
+%\section{Experience}
 
 
 % ---------------Education 
 \section{Education}
 
-\entry{Maharaja Surajmal Institute of Tech., Delhi}{B.Tech, Electrical and Electronics Engineering}{2022}{CGPA 8.45}
+  \entry{Maharaja Surajmal Institute of Technology, Delhi}{B.Tech, Electrical and Electronics Engineering}{2022}{CGPA 8.45}{https://drive.google.com/file/d/1-GO2GwWCt-ymG_pjoSAP-UfTh05LxCyu/view?usp=sharing}
 
 
 
 % ----------------Certifications 
 \section{Certifications}
-\display{GATE qualified}{https://drive.google.com/file/d/1shcvrExVXRHoQDvvzEtomb_LwSz4b1zZ/view?usp=sharing}{2024}
+\display{Qualified GATE EC}{https://drive.google.com/file/d/1shcvrExVXRHoQDvvzEtomb_LwSz4b1zZ/view?usp=sharing}{2024}
 \display{MATLAB onramp}{https://drive.google.com/file/d/1mkDalK8A1keLxXXYWNhQnshTT9sq1vor/view?usp=sharing}{2024}
 \display{Hands-on start to Wolfram Mathematica}{https://drive.google.com/file/d/1UMcH0YTn9qbdHo8LIr4tHWEiZi-Xrejt/view?usp=sharing}{2024}
 \display{Web Development Training: HTML, CSS, JS, React, PHP, DBMS}{https://drive.google.com/file/d/1BNM1FAxmFkPRrkxTPHEAF5gk_rhXNg5g/view?usp=sharing}{2021}
