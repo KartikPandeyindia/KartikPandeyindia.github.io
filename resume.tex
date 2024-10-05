@@ -29,7 +29,7 @@
 \titlespacing{\section}{0pt}{\smallskipamount}{\smallskipamount}
 \newcommand{\heading}[2]{{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
 \newcommand{\entry}[5]{{{\textbf{#1}}} \hfill \href{#5}{\faGraduationCap}\textit{#3} \\ {\footnotesize #2 \hfill #4} \\}
-\newcommand{\tableentry}[3]{\textsc{#1} & \scriptsize{#2}\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+\newcommand{\tableentry}[3]{\textsc{#1} & \tiny{#2}\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
 \newcommand{\display}[3]{\footnotesize #1 \hfill \href{#2}{\faCertificate}  \textit{#3} \\}
 
 \begin{document}
@@ -112,31 +112,34 @@
 
 \section{Proficiency}
 
-
-\begin{supertabular}{r|c}
+\begin{supertabular}{r|l}
 
 % Any language - programming, scripting, etc.
  \tableentry{\footnotesize  \underline{languages} }{\footnotesize \underline{libraries} }{}
- \tableentry{\scriptsize Python}{  \textperiodcentered }{}
- \tableentry{\scriptsize C++}{  \textperiodcentered }{}
- \tableentry{\scriptsize R}{  \textperiodcentered }{}
- \tableentry{\scriptsize SQL}{  \textperiodcentered }{}
- \smallskip{} % Before the last entry of language and library
- \tableentry{\scriptsize Latex}{  \textperiodcentered }{}
+ \tableentry{\scriptsize Python, R}{ pandas \textperiodcentered numpy \textperiodcentered scipy}{}
+ \tableentry{}{ matplotlib \textperiodcentered seaborn \textperiodcentered plotly}{}
+ \tableentry{}{  beautifulsoup \textperiodcentered requests \textperiodcentered scrapy}{}
+ \tableentry{}{  dask \textperiodcentered flask \textperiodcentered fast API}{}
+ \tableentry{}{  tensorflow \textperiodcentered keras \textperiodcentered scikit-learn}{}
+  \tableentry{\scriptsize C++ (for dsa)}{  STL }{}
+ \tableentry{\scriptsize SQL, NoSQL}{   }{} \smallskip{} % Before the last entry of language and library
+ \tableentry{\scriptsize Latex}{  babel\textperiodcentered paracol\textperiodcentered supertabular}{}
 
 % Any embedded software which dominates the program structure. like Bootstrap, React
-  \tableentry{\footnotesize frameworks}{}{}
+  \tableentry{\footnotesize frameworks}{Apache - Hadoop, Spark, Kafka}{}
 
 % Any set of programs assisting the main development - security, automation, database? etc. 
-  \tableentry{\footnotesize tool-chains}{Git \textperiodcentered }{}
+  \tableentry{\footnotesize tool-chains}{Git \textperiodcentered Bash}{}
+  \tableentry{}{Dockers \textperiodcentered Kubernetes}{}
 
 % Any database technology (open or third-party) RDBS, Unstructured, Warehouse, Cloud
-  \tableentry{\footnotesize databases}{ Oracle \textperiodcentered MySQL}{}
+  \tableentry{\footnotesize databases}{ OracleDB \textperiodcentered MySQL \textperiodcentered Cassandra}{}
 
 % Place where development happens, these are completely proprietary. like Matlab, VSCode.
   \tableentry{\footnotesize platforms}{ Matlab \textperiodcentered Mathematica}{}
   \tableentry{\scriptsize }{ AWS \textperiodcentered Jupyter}{}
-  \tableentry{\scriptsize }{ Vim \textperiodcentered VSCode}{}
+  \tableentry{\scriptsize }{ Github \textperiodcentered Vim \textperiodcentered VSCode}{}
+  \tableentry{\scriptsize }{ Tableu \textperiodcentered PowerBI  }{}
   
 % Operating Systems and their shell  
   \tableentry{\footnotesize os (shell)}{ Linux(Bash)}{}
@@ -146,7 +149,8 @@
     
 
 % Methodologies, concepts, jargons.
-  \tableentry{\footnotesize paradigms}{}{}
+  \tableentry{\footnotesize paradigms}{Web Scraping, Data Mining}{}
+  \tableentry{}{ Exploratory Data Analysis }{}
 
 \end{supertabular}
 
