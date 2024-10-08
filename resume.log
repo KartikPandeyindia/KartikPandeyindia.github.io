@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.25)  5 OCT 2024 18:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.25)  8 OCT 2024 11:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -671,25 +671,25 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 115.
+(Font)              <7> on input line 116.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 115.
+(Font)              <5> on input line 116.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/sc' will be
-(Font)              scaled to size 10.0pt on input line 118.
+(Font)              scaled to size 10.0pt on input line 119.
 Package microtype Info: Character `013' is missing
 (microtype)             in font `OT1/LinuxBiolinumT-TLF/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 118.
+(Font)              scaled to size 6.0pt on input line 119.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/sc' will be
-(Font)              scaled to size 8.0pt on input line 119.
+(Font)              scaled to size 8.0pt on input line 120.
 Package microtype Info: Character `013' is missing
 (microtype)             in font `OT1/LinuxBiolinumT-TLF/m/sc/8'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TS1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 119.
+(Font)              scaled to size 6.0pt on input line 120.
 
-Overfull \hbox (7.77419pt too wide) in paragraph at lines 115--156
+Overfull \hbox (10.46825pt too wide) in paragraph at lines 116--159
 [] 
  []
 
@@ -707,13 +707,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{section.1}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.172 \end{document}
+l.175 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.172 \end{document}
+l.175 \end{document}
                     ] (./resume.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -725,7 +725,7 @@ Package rerunfilecheck Info: File `resume.out' has not changed.
 Here is how much of TeX's memory you used:
  18459 strings out of 476106
  323040 string characters out of 5793933
- 1944975 words of memory out of 5000000
+ 1946975 words of memory out of 5000000
  40133 multiletter control sequences out of 15000+600000
  587147 words of font info for 133 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
@@ -735,7 +735,7 @@ ee-Solid.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBio
 linumT.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBioli
 numTB.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBiolin
 umTI.pfb>
-Output written on resume.pdf (1 page, 181295 bytes).
+Output written on resume.pdf (1 page, 181623 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  69 compressed objects within 1 object stream
