@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.25)  9 OCT 2024 10:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.25)  10 OCT 2024 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -657,39 +657,41 @@ LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 10.0pt on input line 70.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/b/n' will be
 (Font)              scaled to size 10.0pt on input line 80.
+LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 104.
 LaTeX Font Info:    Trying to load font information for TS1+LinuxBiolinumT-TLF 
-on input line 109.
+on input line 121.
 
 (/usr/share/texlive/texmf-dist/tex/latex/libertine/TS1LinuxBiolinumT-TLF.fd
 File: TS1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/L
 inuxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 109.
+(Font)              scaled to size 10.0pt on input line 121.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 117.
+(Font)              <7> on input line 129.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 117.
+(Font)              <5> on input line 129.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/sc' will be
-(Font)              scaled to size 10.0pt on input line 120.
+(Font)              scaled to size 10.0pt on input line 132.
 Package microtype Info: Character `013' is missing
 (microtype)             in font `OT1/LinuxBiolinumT-TLF/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 120.
+(Font)              scaled to size 6.0pt on input line 132.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/sc' will be
-(Font)              scaled to size 8.0pt on input line 121.
+(Font)              scaled to size 8.0pt on input line 133.
 Package microtype Info: Character `013' is missing
 (microtype)             in font `OT1/LinuxBiolinumT-TLF/m/sc/8'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TS1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 121.
+(Font)              scaled to size 6.0pt on input line 133.
 
-Overfull \hbox (11.96825pt too wide) in paragraph at lines 117--160
+Overfull \hbox (11.96825pt too wide) in paragraph at lines 129--172
 [] 
  []
 
@@ -707,34 +709,27 @@ pdfTeX warning (ext4): destination with the same identifier (name{section.1}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.176 \end{document}
+l.188 \end{document}
                     
 pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.176 \end{document}
+l.188 \end{document}
                     ] (./resume.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-Package rerunfilecheck Warning: File `resume.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `resume.out':
-(rerunfilecheck)             Before: E2FA4AF16274500AEC6AC3FC256FEDAF;455
-(rerunfilecheck)             After:  8CE4DDA7587CFCDD166E86891B8FFE25;538.
+Package rerunfilecheck Info: File `resume.out' has not changed.
+(rerunfilecheck)             Checksum: 8CE4DDA7587CFCDD166E86891B8FFE25;538.
  ) 
 Here is how much of TeX's memory you used:
- 18460 strings out of 476106
- 323049 string characters out of 5793933
+ 18472 strings out of 476106
+ 323359 string characters out of 5793933
  1946975 words of memory out of 5000000
- 40133 multiletter control sequences out of 15000+600000
- 587147 words of font info for 133 fonts, out of 8000000 for 9000
+ 40136 multiletter control sequences out of 15000+600000
+ 589310 words of font info for 139 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,9n,79p,1003b,736s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Fr
@@ -742,10 +737,10 @@ ee-Solid.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBio
 linumT.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBioli
 numTB.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBiolin
 umTI.pfb>
-Output written on resume.pdf (1 page, 182060 bytes).
+Output written on resume.pdf (1 page, 182434 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 95 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  6 named destinations out of 1000 (max. 500000)
- 48169 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 52273 words of extra memory for PDF output out of 61914 (max. 10000000)
 
