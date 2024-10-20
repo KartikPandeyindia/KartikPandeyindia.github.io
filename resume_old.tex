@@ -1,0 +1,189 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{cmbright}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[sf]{libertine}
+\usepackage{microtype}
+\usepackage{paracol}
+\usepackage{xcolor}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\hypersetup{colorlinks, urlcolor=gray, linkcolor=black}
+
+% Geometry
+\geometry{hmargin=1.75cm, vmargin=2.5cm}
+\setlength\columnsep{0.05\textwidth}
+\setlength\parindent{0pt}
+\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
+\setlength{\medskipamount}{16pt plus 6pt minus 6pt}
+\setlength{\bigskipamount}{24pt plus 8pt minus 8pt}
+
+% Style
+\pagestyle{empty}
+\titleformat{\section}{\large\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\smallskipamount}{\smallskipamount}
+\newcommand{\heading}[2]{{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
+\newcommand{\entry}[5]{{{\textbf{#1}}} \hfill \href{#5}{\faGraduationCap}\textit{#3} \\ {\footnotesize #2 \hfill #4} \\}
+\newcommand{\tableentry}[3]{\textsc{#1} & \tiny{#2}\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+\newcommand{\display}[3]{\footnotesize #1 \hfill \href{#2}{\faCertificate}  \textit{#3} \\}
+%\newcommand{\build}[5]{} %I want to make a dedicated command to input projects
+
+\begin{document}
+\pagecolor[HTML]{ECECEC}
+
+\vspace*{\fill}
+
+\begin{paracol}{2}
+\columnratio{0.30, 0.70}
+
+% Name & headline
+\heading{Kartik Pandey} {Data Science and Analytics}
+
+\switchcolumn     %---------------------------------------------------------------------------------------------------------
+
+% Identity card
+\raggedleft{
+\begin{supertabular}{l|r}
+  \footnotesize\faPhone & \href{tel:918826120960}{ +91 88261 20960} \\
+  \footnotesize\faEnvelope & \href{mailto:kartikpandeyindia@gmail.com}{ kartikpandeyindia@gmail.com} \\
+  \footnotesize\faUserTie & \href{https://www.linkedin.com/in/kartik-pandey-india}{linkedin.com/in/kartik-pandey-in} \\
+  \footnotesize\faPen & \href{https://sleepingpandey.blogspot.com}{sleepingpandey.blogspot.com} \\
+  \footnotesize\faCodeBranch & \href{https://github.com/KartikPandeyindia}{github.com/KartikPandeyindia} \\  
+\end{supertabular}
+  }
+
+\medskip
+\end{paracol}
+ %---------------------------------------------------------------------------------------------------------
+
+\begin{paracol}{2}
+\switchcolumn
+
+%----------------About
+
+\section{Abstract}
+  \footnotesize {Recent graduate with a Bachelors of Technology (B.Tech) with \textit{first division}, in Electrical and Electronics Engineering (EEE) from MSIT, GGSIPU. Have \textit{qualified} Graduate Aptitude Test in Engineering (GATE) in Electronics and Communication Engineering (EC). } 
+
+
+% ---------------Experiences
+%\section{Experience}
+
+
+% ---------------Education 
+\section{Education}
+
+  \entry{Maharaja Surajmal Institute of Technology, Delhi}{B.Tech, Electrical and Electronics Engineering}{2022}{CGPA 8.45}{https://drive.google.com/file/d/1-GO2GwWCt-ymG_pjoSAP-UfTh05LxCyu/view?usp=sharing}
+
+
+
+% ----------------Certifications 
+\section{Certifications}
+  \display{Qualified (GATE EC)}{https://drive.google.com/file/d/1shcvrExVXRHoQDvvzEtomb_LwSz4b1zZ/view?usp=sharing}{2024}
+  \display{(NISM, SEBI) - Financial Literacy for Bharat}{https://drive.google.com/file/d/17fbsZgaEea0BV6-r4r2XJ_5Jf-J3Rga5/view?usp=sharing}{2024}
+  \display{MATLAB onramp}{https://drive.google.com/file/d/1mkDalK8A1keLxXXYWNhQnshTT9sq1vor/view?usp=sharing}{2024}
+  \display{Hands-on start to Wolfram Mathematica}{https://drive.google.com/file/d/1UMcH0YTn9qbdHo8LIr4tHWEiZi-Xrejt/view?usp=sharing}{2024}
+  \display{Web Development Training: HTML, CSS, JS, React, PHP, DBMS}{https://drive.google.com/file/d/1BNM1FAxmFkPRrkxTPHEAF5gk_rhXNg5g/view?usp=sharing}{2021}
+  \display{Summer Training: Programming with C and C++}{https://drive.google.com/file/d/190HRy9cnmwrG0kCt_TeKr5rngykm1PkW/view?usp=sharing}{2020}
+
+% ----------------Projects
+\section{Projects}
+
+% ----------------Publications
+%\section{Publications}  
+
+% ----------------Honors
+%\section{Honors}
+
+% --------------------Hobbies
+  \vspace{\fill}
+{\scriptsize
+   Hobbies: 
+    \href{https://www.kaggle.com/pandeykartik}{kaggle}
+  | \href{https://leetcode.com/u/PandeyKartik/}{leetcode}
+  | \href{https://www.hackerrank.com/profile/kartikpandeyind1}{hackerrank}
+%  | \href{https://codeforces.com/profile/kartikpandeyindia}{codeforces}
+%  | \href{https://www.chess.com/member/think_2ice_b4_u_leap}{chess}
+  }
+  
+
+
+
+\switchcolumn     %---------------------------------------------------------------------------------------------------------
+
+\section{Domain}
+
+\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item Data Science and Analysis
+  \item Finance and Econometrics
+  \item Machine Learning
+  \item Time-series Analysis 
+\end{itemize}
+
+\section{Proficiency}
+
+\begin{supertabular}{r|l}
+
+% Any language - programming, scripting, etc.
+ \tableentry{\footnotesize  \underline{languages} }{\footnotesize \underline{libraries} }{}
+ \tableentry{\scriptsize Python, R}{ pandas \textperiodcentered numpy \textperiodcentered scipy}{}
+ \tableentry{}{ matplotlib \textperiodcentered seaborn \textperiodcentered plotly}{}
+ \tableentry{}{  beautifulsoup \textperiodcentered requests \textperiodcentered scrapy}{}
+ \tableentry{}{  dask \textperiodcentered flask \textperiodcentered fast API}{}
+ \tableentry{}{  tensorflow \textperiodcentered keras \textperiodcentered scikit-learn}{}
+\smallskip{} % Before the last entry of language and library
+ \tableentry{\scriptsize C++ (for dsa)}{  STL }{}
+
+
+
+% Any embedded software which dominates the program structure. like Bootstrap, React
+  \tableentry{\footnotesize frameworks}{Apache - Hadoop, Spark, Kafka}{}
+
+% Any set of programs assisting the main development - security, automation, database? etc. 
+  \tableentry{\footnotesize tool-chains}{ Git \textperiodcentered Bash}{} 
+  \tableentry{}{ SQL \textperiodcentered NoSQL \textperiodcentered PL/SQL}{} 
+  \tableentry{}{ YAML \textperiodcentered JSON \textperiodcentered XML \textperiodcentered CSV}{} 
+  \tableentry{}{ Dockers \textperiodcentered Kubernetes}{} 
+  %Any database technology (open or third-party) RDBS, Unstructured, Warehouse, Cloud 
+  \tableentry{\footnotesize databases}{ OracleDB \textperiodcentered MySQL \textperiodcentered Cassandra}{}
+% Place where development happens, these are completely proprietary. like Matlab, VSCode.
+  \tableentry{\footnotesize platforms}{ Matlab \textperiodcentered Mathematica}{}
+  \tableentry{\scriptsize }{ AWS \textperiodcentered Jupyter}{}
+  \tableentry{\scriptsize }{ Github \textperiodcentered Vim \textperiodcentered VSCode}{}
+  \tableentry{\scriptsize }{ Tableu \textperiodcentered PowerBI  }{}
+  
+% Operating Systems and their shell  
+  \tableentry{\footnotesize os (shell)}{ Linux(Bash)}{}
+% Set of proprietary software bundled together.
+  \tableentry{\footnotesize suites}{  MS Office, Google Workspace}{}
+    
+
+% Methodologies, concepts, jargons.
+  \tableentry{\footnotesize paradigms}{ Web Scraping, Data Mining}{}
+  \tableentry{}{ Exploratory Data Analysis (EDA)}{}
+  \tableentry{}{ Causal Inference  }{}
+  \tableentry{}{ Predictive Analytics  }{}
+
+\end{supertabular}
+
+
+%\section{Affiliations}
+%
+%\begin{supertabular}{r|l}
+%
+%\end{supertabular}
+
+\switchcolumn     %---------------------------------------------------------------------------------------------------------
+
+
+
+\end{paracol}
+
+\vspace*{\fill}
+
+\end{document}
+

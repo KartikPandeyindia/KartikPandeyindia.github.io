@@ -1,189 +1,493 @@
-\documentclass[12pt]{article}
-\usepackage[english]{babel}
-\usepackage{cmbright}
+%
+%Academic CV LaTeX Template
+% Author: Dubasi Pavan Kumar
+% LinkedIn: https://www.linkedin.com/in/im-pavankumar/
+% License: MIT
+%
+% For errors, suggestions, or improvements, please contact:
+% Email: pavankumard.pg19.ma@nitp.ac.in
+%
+
+
+
+\documentclass[a4paper,11pt]{article}
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
-\usepackage{fontawesome5}
-\usepackage{geometry}
+\usepackage{multicol}
 \usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage[sf]{libertine}
-\usepackage{microtype}
-\usepackage{paracol}
-\usepackage{xcolor}
-\usepackage{supertabular}
-\usepackage{titlesec}
-\hypersetup{colorlinks, urlcolor=gray, linkcolor=black}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
 
-% Geometry
-\geometry{hmargin=1.75cm, vmargin=2.5cm}
-\setlength\columnsep{0.05\textwidth}
-\setlength\parindent{0pt}
-\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
-\setlength{\medskipamount}{16pt plus 6pt minus 6pt}
-\setlength{\bigskipamount}{24pt plus 8pt minus 8pt}
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
 
-% Style
-\pagestyle{empty}
-\titleformat{\section}{\large\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{\smallskipamount}{\smallskipamount}
-\newcommand{\heading}[2]{{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
-\newcommand{\entry}[5]{{{\textbf{#1}}} \hfill \href{#5}{\faGraduationCap}\textit{#3} \\ {\footnotesize #2 \hfill #4} \\}
-\newcommand{\tableentry}[3]{\textsc{#1} & \tiny{#2}\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
-\newcommand{\display}[3]{\footnotesize #1 \hfill \href{#2}{\faCertificate}  \textit{#3} \\}
-%\newcommand{\build}[5]{} %I want to make a dedicated command to input projects
+% Page layout
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt} % Addressing fancyhdr warning
+
+% Hyperlink setup (moved after fancyhdr to address warning)
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        {\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        {#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{#2} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.1mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+% Commands for icon sizing and positioning
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+% Font options
+\newcommand{\headerfonti}{\fontfamily{phv}\selectfont} % Helvetica-like (similar to Arial/Calibri)
+\newcommand{\headerfontii}{\fontfamily{ptm}\selectfont} % Times-like (similar to Times New Roman)
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont} % Palatino (elegant serif)
+\newcommand{\headerfontiv}{\fontfamily{pbk}\selectfont} % Bookman (readable serif)
+\newcommand{\headerfontv}{\fontfamily{pag}\selectfont} % Avant Garde-like (similar to Trebuchet MS)
+\newcommand{\headerfontvi}{\fontfamily{cmss}\selectfont} % Computer Modern Sans Serif
+\newcommand{\headerfontvii}{\fontfamily{qhv}\selectfont} % Quasi-Helvetica (another Arial/Calibri alternative)
+\newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont} % Quasi-Palatino (another elegant serif option)
+\newcommand{\headerfontix}{\fontfamily{qtm}\selectfont} % Quasi-Times (another Times New Roman alternative)
+\newcommand{\headerfontx}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
 
 \begin{document}
-\pagecolor[HTML]{ECECEC}
+\headerfontx
 
-\vspace*{\fill}
+% Header
+\begin{center}
+    {\Huge\textbf{KARTIK PANDEY}}
+\end{center}
+\vspace{-6mm}
 
-\begin{paracol}{2}
-\columnratio{0.30, 0.70}
+\begin{center}
+    \small{Data Science and Analytics}
+\end{center}
+\vspace{-6mm}
 
-% Name & headline
-\heading{Kartik Pandey} {Data Science and Analytics}
+\begin{center}
+    \small{
+    \href{tel:+918826120960}{ +91 88261 20960} | \href{mailto:kartikpandeyindia@gmail.com}{ kartikpandeyindia@gmail.com} | 
+    \href{https://kartikpandeyindia.github.io/}{kartikpandeyindia.github.io}
+    }
+\end{center}
+\vspace{-6mm}
 
-\switchcolumn     %---------------------------------------------------------------------------------------------------------
+\begin{center}
+    \scriptsize{
+    \socialicon{\faLinkedin} \href{https://www.linkedin.com/in/kartik-pandey-india}{kartik-pandey-in} | 
+    \socialicon{\faGithub} \href{https://github.com/KartikPandeyindia}{KartikPandeyindia} | 
+%    \ieeeicon{\includegraphics[height=1.3em]{ieee_collabratec_icon.png}} \href{https://ieee-collabratec.ieee.org/app/p/your-profile}{your-profile} |
+    \socialicon{\faKaggle}  \href{https://www.kaggle.com/pandeykartik}{pandeykartik} |
+    \socialicon{\faMedium} \href{https://medium.com/@kartikpandeyindia}{@kartikpandeyindia}
+    }
+\end{center}
 
-% Identity card
-\raggedleft{
-\begin{supertabular}{l|r}
-  \footnotesize\faPhone & \href{tel:918826120960}{ +91 88261 20960} \\
-  \footnotesize\faEnvelope & \href{mailto:kartikpandeyindia@gmail.com}{ kartikpandeyindia@gmail.com} \\
-  \footnotesize\faUserTie & \href{https://www.linkedin.com/in/kartik-pandey-india}{linkedin.com/in/kartik-pandey-in} \\
-  \footnotesize\faPen & \href{https://sleepingpandey.blogspot.com}{sleepingpandey.blogspot.com} \\
-  \footnotesize\faCodeBranch & \href{https://github.com/KartikPandeyindia}{github.com/KartikPandeyindia} \\  
-\end{supertabular}
-  }
+\vspace{-4mm}
 
-\medskip
-\end{paracol}
- %---------------------------------------------------------------------------------------------------------
-
-\begin{paracol}{2}
-\switchcolumn
-
-%----------------About
-
-\section{Abstract}
-  \footnotesize {Recent graduate with a Bachelors of Technology (B.Tech) with \textit{first division}, in Electrical and Electronics Engineering (EEE) from MSIT, GGSIPU. Have \textit{qualified} Graduate Aptitude Test in Engineering (GATE) in Electronics and Communication Engineering (EC). } 
-
-
-% ---------------Experiences
-%\section{Experience}
-
-
-% ---------------Education 
-\section{Education}
-
-  \entry{Maharaja Surajmal Institute of Technology, Delhi}{B.Tech, Electrical and Electronics Engineering}{2022}{CGPA 8.45}{https://drive.google.com/file/d/1-GO2GwWCt-ymG_pjoSAP-UfTh05LxCyu/view?usp=sharing}
+\section{\textbf{Summary}}
+\vspace{1mm}
+\small{
+Recent graduate with a Bachelors of Technology (B.Tech) with \textit{first division}, in Electrical and Electronics Engineering (EEE) from MSIT, GGSIPU. Have \textit{qualified} Graduate Aptitude Test in Engineering (GATE) in Electronics and Communication Engineering (EC). \\
+\textbf{Interests: } Data Science, Finance and Econometrics, Machine Learning Algorithms, Time-Series Analysis 
+}
+\vspace{-2mm}
 
 
+\section{\textbf{Experience}}
+\vspace{-0.4mm}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {Google \quad \href{https://www.companya.com}{\faBuilding}}{City, Country}
+      {Data Scientist}{ Month Year - Month Year}
+      \resumeItemListStart
+        \item \small STAR method (Situation, Task, Action, Result) 
+        \item \small Implemented [technology/method], enhancing [specific aspect] by [specific percentage]
+        \item \small Conducted analysis on [specific data], identifying [key findings]
+        \item \small Presented findings at [specific event], receiving [specific recognition]
+      \resumeItemListEnd 
+%  \resumeSubheading
+%    {Company B [\href{https://www.companyb.com}{\faIcon{globe}}]}{Remote}
+%    {Job Title B}{Month Year - Month Year}
+%    \resumeItemListStart
+%      \item Engineered a [specific system/model], improving [specific metric] by [percentage]
+%      \item Developed [specific tool/method], increasing [specific aspect] by [percentage]
+%      \item Implemented [specific system], reducing [specific metric] by [percentage]
+%      \item Conducted [specific test/analysis] to validate [specific aspect]
+%    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-6mm}
 
-% ----------------Certifications 
-\section{Certifications}
-  \display{Qualified (GATE EC)}{https://drive.google.com/file/d/1shcvrExVXRHoQDvvzEtomb_LwSz4b1zZ/view?usp=sharing}{2024}
-  \display{(NISM, SEBI) - Financial Literacy for Bharat}{https://drive.google.com/file/d/17fbsZgaEea0BV6-r4r2XJ_5Jf-J3Rga5/view?usp=sharing}{2024}
-  \display{MATLAB onramp}{https://drive.google.com/file/d/1mkDalK8A1keLxXXYWNhQnshTT9sq1vor/view?usp=sharing}{2024}
-  \display{Hands-on start to Wolfram Mathematica}{https://drive.google.com/file/d/1UMcH0YTn9qbdHo8LIr4tHWEiZi-Xrejt/view?usp=sharing}{2024}
-  \display{Web Development Training: HTML, CSS, JS, React, PHP, DBMS}{https://drive.google.com/file/d/1BNM1FAxmFkPRrkxTPHEAF5gk_rhXNg5g/view?usp=sharing}{2021}
-  \display{Summer Training: Programming with C and C++}{https://drive.google.com/file/d/190HRy9cnmwrG0kCt_TeKr5rngykm1PkW/view?usp=sharing}{2020}
+\section{\textbf{Education}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
 
-% ----------------Projects
-\section{Projects}
+\resumeSubheading
+{Maharaja Surajmal Institute of Technology (MSIT), New Delhi}{CGPA 8.45}
+{Bachelor of Technology (B.Tech), Electrical and Electronics Engineering (EEE)}{ \href{https://drive.google.com/file/d/1-GO2GwWCt-ymG_pjoSAP-UfTh05LxCyu/view?usp=sharing}{\faGraduationCap} 2018 - 2022}
 
-% ----------------Publications
-%\section{Publications}  
+\begin{comment} %Comments
+\resumeSubheading
+{College Name}{City, Country}
+{Pre-University Education}{Month Year}
+\resumeItemListStart
+\item Grade: XX.X\%
+\resumeItemListEnd
 
-% ----------------Honors
-%\section{Honors}
+\resumeSubheading
+{High School Name}{City, Country}
+{Secondary Education}{Month Year}
+\resumeItemListStart
+\item GPA: X.X/10
+\resumeItemListEnd
+\end{comment} %Comments
 
-% --------------------Hobbies
-  \vspace{\fill}
-{\scriptsize
-   Hobbies: 
-    \href{https://www.kaggle.com/pandeykartik}{kaggle}
-  | \href{https://leetcode.com/u/PandeyKartik/}{leetcode}
-  | \href{https://www.hackerrank.com/profile/kartikpandeyind1}{hackerrank}
-%  | \href{https://codeforces.com/profile/kartikpandeyindia}{codeforces}
-%  | \href{https://www.chess.com/member/think_2ice_b4_u_leap}{chess}
-  }
-  
+\resumeSubHeadingListEnd
+\vspace{-6mm}
 
-
-
-\switchcolumn     %---------------------------------------------------------------------------------------------------------
-
-\section{Domain}
-
-\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
-  \item Data Science and Analysis
-  \item Finance and Econometrics
-  \item Machine Learning
-  \item Time-series Analysis 
-\end{itemize}
-
-\section{Proficiency}
-
-\begin{supertabular}{r|l}
-
-% Any language - programming, scripting, etc.
- \tableentry{\footnotesize  \underline{languages} }{\footnotesize \underline{libraries} }{}
- \tableentry{\scriptsize Python, R}{ pandas \textperiodcentered numpy \textperiodcentered scipy}{}
- \tableentry{}{ matplotlib \textperiodcentered seaborn \textperiodcentered plotly}{}
- \tableentry{}{  beautifulsoup \textperiodcentered requests \textperiodcentered scrapy}{}
- \tableentry{}{  dask \textperiodcentered flask \textperiodcentered fast API}{}
- \tableentry{}{  tensorflow \textperiodcentered keras \textperiodcentered scikit-learn}{}
-\smallskip{} % Before the last entry of language and library
- \tableentry{\scriptsize C++ (for dsa)}{  STL }{}
-
-
-
-% Any embedded software which dominates the program structure. like Bootstrap, React
-  \tableentry{\footnotesize frameworks}{Apache - Hadoop, Spark, Kafka}{}
-
-% Any set of programs assisting the main development - security, automation, database? etc. 
-  \tableentry{\footnotesize tool-chains}{ Git \textperiodcentered Bash}{} 
-  \tableentry{}{ SQL \textperiodcentered NoSQL \textperiodcentered PL/SQL}{} 
-  \tableentry{}{ YAML \textperiodcentered JSON \textperiodcentered XML \textperiodcentered CSV}{} 
-  \tableentry{}{ Dockers \textperiodcentered Kubernetes}{} 
-  %Any database technology (open or third-party) RDBS, Unstructured, Warehouse, Cloud 
-  \tableentry{\footnotesize databases}{ OracleDB \textperiodcentered MySQL \textperiodcentered Cassandra}{}
-% Place where development happens, these are completely proprietary. like Matlab, VSCode.
-  \tableentry{\footnotesize platforms}{ Matlab \textperiodcentered Mathematica}{}
-  \tableentry{\scriptsize }{ AWS \textperiodcentered Jupyter}{}
-  \tableentry{\scriptsize }{ Github \textperiodcentered Vim \textperiodcentered VSCode}{}
-  \tableentry{\scriptsize }{ Tableu \textperiodcentered PowerBI  }{}
-  
-% Operating Systems and their shell  
-  \tableentry{\footnotesize os (shell)}{ Linux(Bash)}{}
-% Set of proprietary software bundled together.
-  \tableentry{\footnotesize suites}{  MS Office, Google Workspace}{}
     
+\section{\textbf{Projects}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
 
-% Methodologies, concepts, jargons.
-  \tableentry{\footnotesize paradigms}{ Web Scraping, Data Mining}{}
-  \tableentry{}{ Exploratory Data Analysis (EDA)}{}
-  \tableentry{}{ Causal Inference  }{}
-  \tableentry{}{ Predictive Analytics  }{}
+\resumeProject
+  {Project A: [Brief Description]}
+  {Tech Stack: [List of tools and technologies used]}
+  {(Q4) 2024}
+  { links:
+    \href{https://github.com/your-username/project-a}{\textcolor{darkblue}{\faFilePowerpoint}}  % Slides, article (medium)
+    \href{https://github.com/your-username/project-a}{\textcolor{darkblue}{\faFile}}            % Reports, (latex)
+    \href{https://github.com/your-username/project-a}{\textcolor{darkblue}{\faFileCode}}        % Notebook (colab, kaggle)
+    \href{https://github.com/your-username/project-a}{\textcolor{darkblue}{\faDatabase}}        % System code, data engg, datasets (github)
+    }
+\resumeItemListStart
+  \item \footnotesize Developed [specific feature/system] for [specific purpose]
+  \item \footnotesize Implemented [specific technology] for [specific goal], achieving [specific result]
+  \item \footnotesize Created [specific component], ensuring [specific benefit]
+  \item \footnotesize Applied [specific method] to analyze [specific aspect]
+\resumeItemListEnd
 
-\end{supertabular}
+%\resumeProject
+%  {Project B: [Brief Description]}
+%  {Tools: [List of tools and technologies used]}
+%  {Month Year}
+%  {{}[\href{https://github.com/your-username/project-b}{\textcolor{darkblue}{\faGithub}}]}
+%\resumeItemListStart
+%  \item Developed [specific model/system], achieving [specific metric]
+%  \item Implemented [specific feature], processing [specific volume] of data
+%  \item Created [specific visualization] for [specific purpose]
+%  \item Developed [specific component] for easy integration with [specific system]
+%\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\begin{comment} % Comments
+\section{\textbf{Patents and Publications} \hfill \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, P=Patent, S=In Submission, T=Thesis}}
+\vspace{0.2mm}
+\small{
+\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}]}]
+\item[\textbf{[C.1]}] Your Name, et al. (Year). \href{https://doi.org/XX.XXXX/XXXXXXX.XXXX.XXXXXXX}{\textbf{Title of Conference Paper}}. In \textit{Name of Conference Proceedings}, pp. XX-XX. Publisher. Date, Location. DOI: XX.XXXX/XXXXXXX.XXXX.XXXXXXX
+
+\item[\textbf{[S.1]}] Your Name, et al. (Year). \textbf{Title of Submitted Paper}. Manuscript submitted for publication in \textit{Journal Name}.
+
+\item[\textbf{[P.1]}] Inventor 1, Your Name, Inventor 3, et al. (Year). \href{https://patentoffice.gov/patent/XXXXXXXXX}{\textbf{Title of Patent}}. Patent Office, Patent No. XXXXXXXXX. Registration Date: Date, Grant Date: Date, Publication Date: Date.
+
+\item[\textbf{[J.1]}] Author 1, Your Name, Author 3, et al. (Year). \href{https://doi.org/XX.XXXX/XXXXX.XXXX.XXXXXXX}{\textbf{Title of Journal Article}}. \textit{Journal Name}, Vol. XX, Issue X, pp. XXX-XXX. DOI: XX.XXXX/XXXXX.XXXX.XXXXXXX
+\end{enumerate}
+}
+\end{comment} %Commnets
+
+\section{\textbf{Skills}}
+\vspace{-0.4mm}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Languages {\tiny[libraries]}:}
+    {Python {\tiny[numpy, pandas, scipy, plotly, dask, fast API]}, R {\tiny[shiny]}, C++ \scriptsize{(for DSA)}}
+\resumeSubItem{Frameworks:}
+    {Hadoop, Kafka, Airflow}
+  \resumeSubItem{Tool-Chains:}
+    {Git, Bash, SQL, NoSQL, YAML, JSON, XML, CSV, Latex}
+  \resumeSubItem{Platforms:}
+    {Matlab, Jupyter, AWS, Vim, VS Code, Ubuntu(linux), PowerBI, Tableu, Alteryx, Colab, Excel, Powerpoint}
+%  \resumeSubItem{Web Technologies:}
+%    {Technology 1, Technology 2, Technology 3, Technology 4, Technology 5}
+%  \resumeSubItem{Data Science \& Machine Learning:}
+%    {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5, Tool 6}
+%  \resumeSubItem{Cloud Technologies:}
+%    {Cloud Platform 1, Cloud Platform 2, Cloud Platform 3}
+%  \resumeSubItem{Specialized Area:}
+%    {Skill 1, Skill 2, Skill 3, Skill 4}
+%  \resumeSubItem{Mathematical \& Statistical Tools:}
+%    {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
+%  \resumeSubItem{Other Tools \& Technologies:}
+%    {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
+  \resumeSubItem{Paradigms:}{CRISP-DM (Data Mining), Exploratory Data Analysis (EDA)}
+ \resumeHeadingSkillEnd
+
+\begin{comment}
+\section{\textbf{Honors and Awards}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {Award Name A}
+  {Awarding Institution/Organization}
+  {Month Year}
+  {{}[\href{https://award-link-a.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item Brief description of the award and its significance
+  \item Impact or recognition associated with the award
+\resumeItemListEnd
+
+\resumeProject
+  {Award Name B}
+  {Awarding Institution/Organization}
+  {Month Year}
+  {{}[\href{https://award-link-b.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item Brief description of the award and its significance
+  \item Impact or recognition associated with the award
+\resumeItemListEnd
+
+\resumeProject
+  {Competition Achievement}
+  {Competition Name, Organizing Body}
+  {Month Year}
+  {{}[\href{https://competition-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item Specific achievement or rank in the competition
+  \item Skills or abilities demonstrated through this achievement
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-6mm}
+\section{\textbf{Leadership Experience}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumeProject
+  {Leadership Role A}
+  {Organization/Institution Name}
+  {Month Year - Month Year}
+  {{}[\href{https://organization-a-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item Key responsibility or achievement in this role
+  \item Quantifiable impact or improvement made during tenure
+  \item Initiative taken or project led
+\resumeItemListEnd
+
+\resumeProject
+  {Leadership Role B}
+  {Organization/Institution Name}
+  {Month Year - Month Year}
+  {{}[\href{https://organization-b-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item Key responsibility or achievement in this role
+  \item Quantifiable impact or improvement made during tenure
+  \item Initiative taken or project led
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-6mm}
+
+\section{\textbf{Volunteer Experience}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumeProject
+  {Volunteer Role A}
+  {Organization Name}
+  {Month Year - Month Year}
+  {{}[\href{https://volunteer-org-a-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item Key responsibility or contribution in this role
+  \item Impact of your volunteer work
+  \item Skills developed or applied during this experience
+\resumeItemListEnd
+
+\resumeProject
+  {Volunteer Role B}
+  {Organization Name}
+  {Month Year - Present}
+  {{}[\href{https://volunteer-org-b-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item Key responsibility or contribution in this role
+  \item Impact of your volunteer work
+  \item Skills developed or applied during this experience
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Professional Memberships}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Professional Organization A}
+    {, Membership ID: XXXXXXXX}
+    {Month Year - Present}
+\resumePOR{Professional Organization B}
+    {, \href{https://membership-certificate-link.com}{Membership ID: XXXXXXXX}}
+    {Month Year - Present}
+\resumePOR{Professional Organization C}
+    {, \href{https://membership-certificate-link.com}{Membership ID: XXXXXXXX}}
+    {Month Year - Present}
+
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+\end{comment}
+
+\section{\textbf{Certifications}}
+\vspace{-0.2mm}
+\resumeSubHeadingListStart
+\resumePOR{}{\footnotesize {Qualified Graduate Aptitude Test in Engineering (GATE) in Electronics and Communication (EC)}  }{\href{https://drive.google.com/file/d/1shcvrExVXRHoQDvvzEtomb_LwSz4b1zZ/view?usp=sharing}{\textcolor{darkblue}{\faCertificate}} 2024}
+\resumePOR{}{\footnotesize {National Institute of Securities Markets (NISM, SEBI) - Financial Literacy for Bharat}  }{\href{https://drive.google.com/file/d/17fbsZgaEea0BV6-r4r2XJ_5Jf-J3Rga5/view?usp=sharing}{\textcolor{darkblue}{\faCertificate}} 2024}
+\resumePOR{}{\footnotesize {MathWorks Training - MATLAB Onramp}  }{\href{https://drive.google.com/file/d/1mkDalK8A1keLxXXYWNhQnshTT9sq1vor/view?usp=sharing}{\textcolor{darkblue}{\faCertificate}} 2024}
+\resumePOR{}{\footnotesize {Wolfram U - Hands-on Start to Wolfram Mathematica}  }{\href{https://drive.google.com/file/d/1UMcH0YTn9qbdHo8LIr4tHWEiZi-Xrejt/view?usp=sharing}{\textcolor{darkblue}{\faCertificate}} 2024}
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\begin{comment}
+\section{\textbf{Additional Information}}
+\vspace{-0.4mm}
+\small{
+\textbf{Languages:} Language A (Proficiency level), Language B (Proficiency level), Language C (Proficiency level)
+
+\textbf{Interests:} Interest 1, Interest 2, Interest 3, Interest 4
+}
+\vspace{-4mm}
 
 
-%\section{Affiliations}
-%
-%\begin{supertabular}{r|l}
-%
-%\end{supertabular}
+\section{\textbf{References}}
+\vspace{-0.2mm}
+\small{
+\begin{enumerate}[leftmargin=*,labelsep=2mm]
+\item \textbf{Reference Person 1}\\
+   Job Title, Department\\
+   Organization/Institution Name\\
+   Email: email1@example.com\\
+   Phone: +X-XXX-XXX-XXXX\\
+   \textit{Relationship: [e.g., Thesis Advisor, Manager, etc.]}
 
-\switchcolumn     %---------------------------------------------------------------------------------------------------------
+\item \textbf{Reference Person 2}\\
+   Job Title, Department\\
+   Organization/Institution Name\\
+   Email: email2@example.com\\
+   Phone: +X-XXX-XXX-XXXX\\
+   \textit{Relationship: [e.g., Project Supervisor, Colleague, etc.]}
 
-
-
-\end{paracol}
-
-\vspace*{\fill}
+\item \textbf{Reference Person 3}\\
+   Job Title, Department\\
+   Organization/Institution Name\\
+   Email: email3@example.com\\
+   Phone: +X-XXX-XXX-XXXX\\
+   \textit{Relationship: [e.g., Mentor, Collaborator, etc.]}
+\end{enumerate}
+}
+\end{comment}
 
 \end{document}
-
